@@ -12,6 +12,7 @@ Used hardware components:
 
 Used software:
 - Atmel Studio 8.0 (Microchip Studio)
+- Altium designer (CAD for PCB design)
 
 Programing languages used:
 - Assembly (AVR instruction set)
