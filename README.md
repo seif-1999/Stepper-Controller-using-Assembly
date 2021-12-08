@@ -1,6 +1,6 @@
 # Stepper-Driver-using-Assembly
 Project Description:
-stepper motor with 8051/89c51 using assembly language.
+stepper motor with 8086 using assembly language.
 This project shows how to create astepper motor controller and program it using assembly.
 
 Used hardware components:
