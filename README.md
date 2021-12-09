@@ -17,4 +17,4 @@ Used software:
 Programing languages used:
 - Assembly (AVR instruction set)
 - C
-- 
+-
