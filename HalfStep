@@ -1,0 +1,52 @@
+/*
+ * HalfStep.asm
+ *   Author: Amina 
+ */ 
+Step 0.5
+        sbi PORTA, A1
+        cbi PORTA, A2
+        cbi PORTA, B1
+        cbi PORTA, B2
+        ldi delayMultiplier, 5
+Step 1	
+        sbi PORTA, A1
+        cbi PORTA, A2
+        sbi PORTA, B1
+        cbi PORTA, B2
+        ldi delayMultiplier, 3
+Step 1.5
+        cbi PORTA, A1
+        cbi PORTA, A2
+        sbi PORTA, B1
+        cbi PORTA, B2
+        ldi delayMultiplier, 5 
+Step 2	 
+        cbi PORTA, A1
+        sbi PORTA, A2
+        sbi PORTA, B1
+        cbi PORTA, B2
+        ldi delayMultiplier,5	    
+Step 2.5
+        cbi PORTA, A1
+        sbi PORTA, A2
+        cbi PORTA, B1
+        cbi PORTA, B2
+        ldi delayMultiplier, 5
+Step 3	
+        cbi PORTA, A1
+        sbi PORTA, A2
+        cbi PORTA, B1
+        sbi PORTA, B2
+        ldi delayMultiplier, 5	 
+Step 3.5
+        cbi PORTA, A1
+        cbi PORTA, A2
+        cbi PORTA, B1
+        sbi PORTA, B2
+        ldi delayMultiplier, 5	    
+Step 4
+        sbi PORTA, A1
+        cbi PORTA, A2
+        cbi PORTA, B1
+        sbi PORTA, B2
+        ldi delayMultiplier, 5	
