@@ -16,11 +16,13 @@ Used hardware components:
 - 3.7V Li-ion battery
 - 5V boost conveter
 
-Used software:
+Used software tools:
 - Atmel Studio 8.0 (Microchip Studio)
 - Altium designer (CAD for PCB design)
 
 Programing languages used:
 - Assembly (AVR instruction set)
 - C
--first
+<main
+      first
+>main
