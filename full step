@@ -1,9 +1,9 @@
-   ; Step 1
+   	; Step 1
 	 sbi PORTB, A1
 	 cbi PORTB, A2
 	 sbi PORTB, B1
 	 cbi PORTB, B2
-   lcall delay
+   rcall delay
 
 
 	 ; Step 2
@@ -11,14 +11,14 @@
 	 cbi PORTB, A1
 	 sbi PORTB, B1
 	 cbi PORTB, B2
-   lcall delay
+   rcall delay
 
 	 ; Step 3
 	 sbi PORTB, A2
 	 cbi PORTB, A1
 	 sbi PORTB, B2
 	 cbi PORTB, B1
-   lcall delay
+   rcall delay
 
 
 	 ; Step 4
@@ -26,7 +26,7 @@
 	 cbi PORTB, A2
 	 sbi PORTB, B2
 	 cbi PORTB, B1
-   lcall delay
+   rcall delay
 	 
    
 	  ; Step 4
@@ -34,7 +34,7 @@
 	 cbi PORTB, A2
 	 sbi PORTB, B2
 	 cbi PORTB, B1
-    lcall delay
+    rcall delay
 	
 
 	  ; Step 3
@@ -42,7 +42,7 @@
 	 cbi PORTB, A1
 	 sbi PORTB, B2
 	 cbi PORTB, B1
-   lcall delay
+   rcall delay
 
 
 
@@ -51,7 +51,7 @@
 	 cbi PORTB, A1
 	 sbi PORTB, B1
 	 cbi PORTB, B2
-   lcall delay
+   rcall delay
 
 
 
@@ -60,7 +60,7 @@
 	 cbi PORTB, A2
 	 sbi PORTB, B1
 	 cbi PORTB, B2
-   lcall delay
+   rcall delay
    
    delay:
    MOV R1,#200D ; 200 x 50 ms = 10 sec
@@ -70,6 +70,6 @@
    D2:
    JNB TF1,D2 ; timer overflow in 50 ms
    CLR TF1
-   DJNZ R1,D1 ; loop 200 times
+   DJNZ R1,D1 ; 
    ret
 	 
