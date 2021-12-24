@@ -62,7 +62,9 @@
 	 sbi PORTB, B1
 	 cbi PORTB, B2
    rcall delay
-   
+     	
+	.def L2L		 = r24
+	.def L2H		 = r25
  	.equ l1		 = 20000  
  delay:
 	  push r16
@@ -73,14 +75,14 @@
 	
  loop2:
     
-	  ldi r24, LOW(l1)
-	  ldi r25, HIGH(l1)
+	  ldi L2L, LOW(l1)
+	  ldi L2H, HIGH(l1)
 	  
 loop1:
-	  sbiw r24, 1
+	  sbiw L2L, 1
 	  brne loop1
 
-	  dec delayMultiplier
+	 
 	  brne loop2
 
 	  pop r20
