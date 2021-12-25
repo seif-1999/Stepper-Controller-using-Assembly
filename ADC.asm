@@ -1,4 +1,9 @@
-
+/*
+ * ADCIntial.asm
+ *
+ *  Created: 21/12/18 9:17:07 PM
+ *   Author: Seif
+ */ 
 
  ADCIntial:
 			push r16
@@ -14,14 +19,10 @@
 
 			
 			
-			in r16, ADMUX
-			ori r16, (1<<5)
-			out ADMUX, r16 ; left adjust the adc result to read high byte only for lower resolution
+			sbi ADMUX, 5; left adjust the adc result to read high byte only for lower resolution
 			
-			in r16, SREG
-			ori r16, (1<<7)
-			out SREG, r16
-
+		
+			sbi SREG, 7
 
 			pop r16
 
@@ -30,16 +31,8 @@
 
  ADCStartConv:
  
-			 push r16
 			
-			
-
-			 in r16, ADCSRA
-			 ori r16, (1<<6)
-			 out ADCSRA , r16
-			  
-
-			
-			 pop r16
+			 sbi ADCSRA, 6
+			 
  ret
 
