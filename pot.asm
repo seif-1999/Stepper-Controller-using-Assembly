@@ -9,12 +9,12 @@
  ldi totalSteps, 200		
  mul totalSteps, ADCResH	; the Result of the multiplication is stored in r0, r1
 
- ;**load divisor & divident**
+ ;***************************************************load divisor & divident*********************************************************************
  ldi dv16uL, 255
  clr dv16uH		;load 255 to the divisor register
 
  movw dd16uL, r0	; load the previous multiplcation result to the divident register
- ;*************
+ ;***********************************************************************************************************************************************
 
  rcall div16u		; preform the division, the result is the target position.
 
@@ -25,7 +25,7 @@
 
  breq again			; start over if target = current
  brlo reverse		; branch to reverse if current > target
- rjmp forward		; if current > target
+ rjmp forward		; if current < target
  
  again:
  rjmp start
@@ -39,7 +39,7 @@
 
  reverse: 
  lds temp, current ; load current position
- dec temp		; increament current position
+ dec temp		; decreament current position
  sts current, temp ; store current position
 
  endforward:
