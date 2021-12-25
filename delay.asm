@@ -1,6 +1,6 @@
-    .def L2L		 = r24
-	  .def L2H		 = r25
-	  .equ l1		 = 20000
+          .def L2L = r24
+	  .def L2H = r25
+	  .equ l1 = 20000
 
 
  delay:
