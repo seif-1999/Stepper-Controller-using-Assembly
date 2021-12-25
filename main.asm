@@ -1,6 +1,4 @@
-;
 ; StepperController.asm
-; Replace with your application code
 
 	.include "m32def.inc"		;load the ATmega32 directory which include rigsters' & bits' named and addresses
 
