@@ -1,7 +1,7 @@
 	.include "m32def.inc"		;load the ATmega32 directory which include rigsters' & bits' named and addresses
 
-	
-
+	.def ADCResL = r2
+	.def ADCResH = r3 ; r2, r3 must be saved
 	; define motor pins			
 	.equ A1				 = PD4
 	.equ A2				 = PD5
@@ -19,7 +19,13 @@
 	.org 0x100
 
 	main:
+;*********** Stack intialization**********
 
+		ldi	r21,LOW(RAMEND)		; initialize 
+		out	SPL,r21				; stack pointer ;do not need to save r21
+		ldi	r21,HIGH(RAMEND)	; to RAMEND
+		out	SPH,r21				; "				;do not need to save r21
+;****************************
 		; set all portb as output
 		 ser r16
 		 out DDRD, r16 ;do not need to save r16
@@ -30,6 +36,8 @@
 
 
 
+
+;*************************
 
 		clr r16		; do not need to save r16
 		sts current, r16 ; intialize current position to 0
