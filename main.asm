@@ -1,10 +1,6 @@
 ;StepperController.asm
-; Created: 21/12/12 2:24:53 AM
-; Author : Seif
 
-; Replace with your application code
-
-	.include "m32def.inc"		;load the ATmega32 directory which include rigsters' & bits' named and addresses
+.include "m32def.inc"		;load the ATmega32 directory which include rigsters' & bits' named and addresses
 
 	
 	
