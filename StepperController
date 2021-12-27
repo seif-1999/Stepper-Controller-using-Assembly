@@ -21,7 +21,8 @@
 	rjmp ADCDoneISR
 	.org 0x100
 
-	main:
+
+main:
 ;*********** Stack intialization**********
 
 		ldi	r21,LOW(RAMEND)		; initialize 
