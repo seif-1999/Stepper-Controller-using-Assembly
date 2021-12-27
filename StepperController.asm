@@ -4,6 +4,7 @@
 	
 	.def ADCResL = r2
 	.def ADCResH = r3 ; r2, r3 must be saved
+	
 	; define motor pins			
 	.equ A1				 = PD4
 	.equ A2				 = PD5
