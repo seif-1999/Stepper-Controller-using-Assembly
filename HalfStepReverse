@@ -4,157 +4,157 @@
 *   Author: Amina 
 */ 
 
-.equ halfDel = 20
-.equ halfDelRev = 30
+.equ halfDel = 5
+.equ halfDelRev = 5
 
 HalfStep:
-
+ 
 ; Step 0.5
-   sbi PORTD, A1
-   cbi PORTD, A2
-   cbi PORTD, B1
-   cbi PORTD, B2
+	 sbi MOTOR, A1
+	 cbi MOTOR, A2
+	 cbi MOTOR, B1
+	 cbi MOTOR, B2
 
-   ldi delayMultiplier, halfDel
+	 ldi delayMultiplier, halfDel
 	 rcall delay
 
 ; Step 1.0
-	 sbi PORTD, A1
-   cbi PORTD, A2
-   sbi PORTD, B1
-   cbi PORTD, B2
-   
-   ldi delayMultiplier, halfDel
+	 sbi MOTOR, A1
+	 cbi MOTOR, A2
+	 sbi MOTOR, B1
+	 cbi MOTOR, B2
+
+	 ldi delayMultiplier, halfDel
 	 rcall delay
 
-; Step 1.5 
-   cbi PORTD, A1
-   cbi PORTD, A2
-   sbi PORTD, B1
-   cbi PORTD, B2
+; Step 1.5
+	 cbi MOTOR, A1
+	 cbi MOTOR, A2
+	 sbi MOTOR, B1
+	 cbi MOTOR, B2
 
-   ldi delayMultiplier, halfDel
-   rcall  delay
- 
-; Step 2.0	 
-   cbi PORTD, A1
-   sbi PORTD, A2
-   sbi PORTD, B1
-   cbi PORTD, B2
+	 ldi delayMultiplier, halfDel
+	 rcall delay	 
 
-   ldi delayMultiplier, halfDel
-   rcall delay
-   
+; Step 2.0
+	 cbi MOTOR, A1
+	 sbi MOTOR, A2
+	 sbi MOTOR, B1
+	 cbi MOTOR, B2
+
+	 ldi delayMultiplier, halfDel
+	 rcall delay
+
 ; Step 2.5
-   cbi PORTD, A1
-   sbi PORTD, A2
-   cbi PORTD, B1
-   cbi PORTD, B2
+	 cbi MOTOR, A1
+	 sbi MOTOR, A2
+	 cbi MOTOR, B1
+	 cbi MOTOR, B2
 
-   ldi delayMultiplier, halfDel
+	 ldi delayMultiplier, halfDel
 	 rcall delay
 
-; Step 3.0	
-   cbi PORTD, A1
-   sbi PORTD, A2
-   cbi PORTD, B1
-   sbi PORTD, B2
+; Step 3.0
+	 cbi MOTOR, A1
+	 sbi MOTOR, A2
+	 cbi MOTOR, B1
+	 sbi MOTOR, B2
 
-   ldi delayMultiplier, halfDel
-   rcall delay
+	 ldi delayMultiplier, halfDel
+	 rcall delay
 
 ; Step 3.5
-   cbi PORTD, A1
-   cbi PORTD, A2
-	 cbi PORTD, B1
-   sbi PORTD, B2
+	 cbi MOTOR, A1
+	 cbi MOTOR, A2
+	 cbi MOTOR, B1
+	 sbi MOTOR, B2
 
-   ldi delayMultiplier, halfDel 
-   rcall delay
+	 ldi delayMultiplier, halfDel
+	 rcall delay
+	 
+ ; Step 4.0
+	 sbi MOTOR, A1
+	 cbi MOTOR, A2
+	 cbi MOTOR, B1
+	 sbi MOTOR, B2
 
-; Step 4.0
-	 sbi PORTD, A1 
-   cbi PORTD, A2
-   cbi PORTD, B1
-   sbi PORTD, B2
-    
-   ldi delayMultiplier, halfDel 
-   rcall delay
-
+	 ldi delayMultiplier, halfDel
+	 rcall delay
+	 
 ret
 
 HalfStepReverse:
  
 ; Step 4.0
-	 sbi PORTD, A1
-	 cbi PORTD, A2
-   cbi PORTD, B1
-   sbi PORTD, B2
+	 sbi MOTOR, A1
+	 cbi MOTOR, A2
+	 cbi MOTOR, B1
+	 sbi MOTOR, B2
 
-   ldi delayMultiplier, halfDelRev
+	 ldi delayMultiplier, halfDelRev
 	 rcall delay
 
- ; Step 3.5
-	  cbi PORTD, A1
-	  cbi PORTD, A2
-	  cbi PORTD, B1
-	  sbi PORTD, B2
+; Step 3.5
+	 cbi MOTOR, A1
+	 cbi MOTOR, A2
+	 cbi MOTOR, B1
+	 sbi MOTOR, B2
 
-    ldi delayMultiplier, halfDelRev
-    rcall delay
-    
- ; Step 3.0
-	  cbi PORTD, A1
-    sbi PORTD, A2
-    cbi PORTD, B1
-    sbi PORTD, B2
-    
-    ldi delayMultiplier, halfDelRev
-    rcall delay
+	 ldi delayMultiplier, halfDelRev
+	 rcall delay
+	 
+; Step 3.0
+	 cbi MOTOR, A1
+	 sbi MOTOR, A2
+	 cbi MOTOR, B1
+	 sbi MOTOR, B2
+
+	 ldi delayMultiplier, halfDelRev
+	 rcall delay
 	
- ; Step 2.5
-    cbi PORTD, A1
-    sbi PORTD, A2
-	  cbi PORTD, B1
-	  cbi PORTD, B2
-    
-    ldi delayMultiplier, halfDelRev
-	  rcall delay
-    
+; Step 2.5
+	 cbi MOTOR, A1
+	 sbi MOTOR, A2
+	 cbi MOTOR, B1
+	 cbi MOTOR, B2
+
+	 ldi delayMultiplier, halfDelRev
+	 rcall delay	 
+
 ; Step 2.0
-	 cbi PORTD, A1
-	 sbi PORTD, A2
-	 sbi PORTD, B1
-	 cbi PORTD, B2
-   
-   ldi delayMultiplier, halfDelRev
+	 cbi MOTOR, A1
+	 sbi MOTOR, A2
+	 sbi MOTOR, B1
+	 cbi MOTOR, B2
+
+	 ldi delayMultiplier, halfDelRev
 	 rcall delay
 
 ; Step 1.5
-	 cbi PORTD, A1
-	 cbi PORTD, A2
-	 sbi PORTD, B1
-	 cbi PORTD, B2
-    
-   ldi delayMultiplier, halfDelRev
+	 cbi MOTOR, A1
+	 cbi MOTOR, A2
+	 sbi MOTOR, B1
+	 cbi MOTOR, B2
+
+	 ldi delayMultiplier, halfDelRev
 	 rcall delay
 
 ; Step 1.0
-	 sbi PORTD, A1
-	 cbi PORTD, A2
-	 sbi PORTD, B1
-	 cbi PORTD, B2
+	 sbi MOTOR, A1
+	 cbi MOTOR, A2
+	 sbi MOTOR, B1
+	 cbi MOTOR, B2
 
-   ldi delayMultiplier, halfDelRev
+	 ldi delayMultiplier, halfDelRev
 	 rcall delay
 	 
 ; Step 0.5
-	 sbi PORTD, A1
-	 cbi PORTD, A2
-	 cbi PORTD, B1
-	 cbi PORTD, B2
+	 sbi MOTOR, A1
+	 cbi MOTOR, A2
+	 cbi MOTOR, B1
+	 cbi MOTOR, B2
 
-   ldi delayMultiplier, halfDelRev
+	 ldi delayMultiplier, halfDelRev
 	 rcall delay
-	
- ret
+
+ret
