@@ -3,17 +3,17 @@
 ## Table of contents
 
 - [Quick start](#Quick-start)
-- [Project Description:](#Project Description:)
-- [Used hardware components:](#Used hardware components:)
-- [Used software tools:](#Used software tools:)
-- [Programing languages used:](#Programing languages used:)
+- [Project Description](#Project Description)
+- [Used hardware components](#Used hardware components)
+- [Used software tools](#Used software tools)
+- [Programing languages used](#Programing languages used)
 - [Components discription](#Components-discription)
 - [Team members](#Team-members)
 
 ## Quick start
 
-- in order to run the [circuit](https://github.com/Rowan-Naguib/8086_steppermotor_assembly/blob/main/stepper%20motor_project.pdsprj) you have to install at least proteus vertion 7 . 
-- Clone the repo: `git clone https://github.com/Rowan-Naguib/8086_steppermotor_assembly.git`
+- in order to run the [circuit](https://github.com/seif-1999/Stepper-Controller-using-Assembly) you have to install at least proteus vertion 7 . 
+- Clone the repo: `git clone https://github.com/seif-1999/Stepper-Controller-using-Assembly.git`
 
 
 ## Project Description:
