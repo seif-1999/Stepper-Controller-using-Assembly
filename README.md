@@ -3,10 +3,10 @@
 ## Table of contents
 
 - [Quick start](#Quick-start)
-- [Project Description](#Project Description)
-- [Used hardware components](#Used hardware components)
-- [Used software tools](#Used software tools)
-- [Programing languages used](#Programing languages used)
+- [Project Description](#Project-Description)
+- [Used hardware components](#Used-hardware-components)
+- [Used software tools](#Used-software-tools)
+- [Programing languages used](#Programing-languages-used)
 - [Components discription](#Components-discription)
 - [Team members](#Team-members)
 
