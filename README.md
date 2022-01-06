@@ -3,15 +3,11 @@
 ## Table of contents
 
 - [Quick start](#Quick-start)
-- [Code Flow](#Code-Flow)
-- [Used Devices](#Used-Devices)
+- [Project Description:](#Project Description:)
+- [Used hardware components:](#Used hardware components:)
+- [Used software tools:](#Used software tools:)
+- [Programing languages used:](#Programing languages used:)
 - [Components discription](#Components-discription)
-- [Controlling the motor's speed](#Controlling-the-motors-speed)
-- [DISPLAY function](#DISPLAY-function)
-- [GETSPEED function](#GETSPEED-function)
-- [GETDSPLYD function](#GETDSPLYD-function)
-- [Circuit Diagram](#Circuit-Diagram)
-- [Features](#Features)
 - [Team members](#Team-members)
 
 ## Quick start
