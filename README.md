@@ -149,7 +149,7 @@ are pinned in opposition to simplify board layout.
 
   <hr>
   
-  ### 5V boost converter
+ ### 5V boost converter
 <img src="    " align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
@@ -157,9 +157,23 @@ are pinned in opposition to simplify board layout.
 
   
   <ul>
-    <li> 
+- 18650 Lithium Charge & Discharge Integrated Li-ion Battery 2A 5V With Battery Level Indicator
+
+- Charging voltage: DC4.5V-5.5V (recommended DC5V)
+- Charging current: 0-2.1A
+- Full voltage: 4.2V ± 1%
+- Discharge current: 0-3.5A
+
+- Discharge efficiency: up to 96%
+- Output voltage: 5V
+- Output current: 0-2.1A
+
+- Overcurrent protection (OCP)
+- Overvoltage protection (OVP)
+- Short circuit protection (SCP)
+- Over temperature protection (OTP)
+
   
-  </li>
   </ul>
 </p>
   </span>
@@ -215,9 +229,9 @@ are pinned in opposition to simplify board layout.
 
   
   <ul>
-    <li>
-  
-  </li>
+- A crystal oscillator is an electronic oscillator circuit that uses the mechanical resonance of a vibrating crystal of piezoelectric material to create an electrical signal with a constant frequency (in this project, an 8MHz crystal is used).
+- Acts as the clock source for the microcontroller.
+    
   </ul>
 </p>
   </span>
@@ -233,9 +247,7 @@ are pinned in opposition to simplify board layout.
 
   
   <ul>
-    <li> 
-  
-  </li>
+    
   </ul>
 </p>
   </span>
@@ -243,7 +255,6 @@ are pinned in opposition to simplify board layout.
 </div>
 
   <hr>
-  
 
  ## Controlling the motor's speed
 
