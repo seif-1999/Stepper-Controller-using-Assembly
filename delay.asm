@@ -1,31 +1,34 @@
-    .def L2L = r24 
-	  .def L2H = r25
-	  .equ l1 = 20000
 
 
- delay:
-	  push r16
-	  push r17
-	  push r18
-	  push r19
-	  push r20
-	
- loop2:
-    
-	  ldi L2L, LOW(l1)
-	  ldi L2H, HIGH(l1)
+.def delayMultiplier = r25			; outer loop counter, the inner loop (l1) = 10ms is repeated "delayMultiplier" number of times
+
+.equ l1		 = 20000				; inner loop counter, repeat 20,000 times for 10ms as a total
+
+
+ delay:								; saved used registers
+	  push r27
+	  push r26
+	  push r25
 	  
-loop1:
-	  sbiw L2L, 1
-	  brne loop1
 
-	  dec delayMultiplier
-	  brne loop2
+	  
+	
+ loop2:								; start outer loop by intializing a counter for the inner loop
+    
+	  ldi r26, LOW(l1)				; Load lower part of counter to r26
+	  ldi r27, HIGH(l1)				; load higher part of counter to r27
+	  
+loop1:								; start the inner loop
+	  sbiw r26, 1					; decrement the inner loop counter
+	  brne loop1					; if inner loop counter != 0, keep in inner loop
 
-	  pop r20
-	  pop r19
-	  pop r18
-	  pop r17
-	  pop r16
+	  dec delayMultiplier			; dec the outer loop counter
+	  brne loop2					; if outer loop counter != 0, jump to outer loop
 
-	  ret
+	  
+	  pop r25						; retrieve saved registers
+	  pop r26
+	  pop r27
+
+
+	  ret							
