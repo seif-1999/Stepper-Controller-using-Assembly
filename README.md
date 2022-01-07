@@ -123,3 +123,147 @@ as we did in the project. </li>
 In this way we control the position of Motor (rotation angle) by changing the position of the potentiometer, a range between 0-5V (0-255) can be obtained through the potentiometer by using ADC converter to convert the analog value (0-5V) of the potentiometer to digital value (0-255) and the result is mapped to position (step 0-200), the target position will be subtracted from motor current position to determine the direction and number of stepps to move, and the reminder of target position divided by 4 will be used to determine the appropriate step sequence.
 
 </br>
+
+### ULN2003A (driver)
+<img src="images/ULN2003A.jpg" align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li>
+  
+  </li>
+</ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  ### 5V boost converter
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li> 
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  
+  ### Li-ion battery
+
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li>
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  
+  ### 2-pin DIP switch
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li>
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  
+  ### 8 MHz crystal oscillator
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li>
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  ### Miscellaneous connectors
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li> 
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  
+
+ ## Controlling the motor's speed
+
+In our circuit we can control the speed of the motor by two different ways, the first way was through change (half / full) cycle switch and the second way was through change the potentiometer slider place and we can use the two ways in same time. the two ways have different techniques to change speed which :
+
+- **(half / full) cycle switch :** change the speed of the motor only in two modes the full cycle and the half cycle mode , and it can be achieved by making two arrays of steps and by using one of them with the stepper motor it will step corresponding to the selected array and the array selected according to the (half / full) cycle switch.
+ ```
+STEPS  DB        00000011B,              ; Full Step Mode Array
+                 00000110B, 
+                 00001100B, 
+                 00001001B   
+
+HSTEPS DB        00000001B,      	       ; Half Step Mode Array
+                 00000011B, 
+                 00000010B, 
+                 00000110B, 
+                 00000100B, 
+                 00001100B, 
+                 00001000B,
+                 00001001B
+ ``` 
+
+
+## Team members
+- [Seif El-Din Ehab](https://github.com/seif-1999)
+- [Amina Farouk](https://github.com/aminafarouk1)
+- [Rowan Mohamed Naguib](https://github.com/rowannaguib)
+- [Ahmed Mohamed Sayed Tolba](https://github.com/ahmedtolba06)
+- [Seif-Eldin Ragab](https://github.com/Seifeldin5)
+ 
