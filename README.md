@@ -13,7 +13,7 @@
 
 ## Quick start
 
-- in order to run the [circuit](https://github.com/seif-1999/Stepper-Controller-using-Assembly) you have to install at least proteus vertion 7. 
+- in order to run the [circuit](https://github.com/seif-1999/Stepper-Controller-using-Assembly) you have to install at least proteus version 7. 
 - Clone the repo: `git clone https://github.com/seif-1999/Stepper-Controller-using-Assembly.git`
 
 
@@ -37,12 +37,15 @@ stepper motor with ATmega32 and AVR assembly.
 This project shows how to create astepper motor controller and program it using assembly.
 
 ## Used hardware components:
-- L293D Dual H-bridge IC
-- Nema17 Stepper Motor
-- Atmega32 microcontroller (AVR Architecture)
-- 3.7V Li-ion battery
-- 5V boost conveter
-
+-Stepper Motor
+-Atmega32 microcontroller (AVR Architecture)
+-ULN2003A (driver)
+-Potentiometer
+-5V boost converter
+-Li-ion battery
+-2-pin DIP switch
+-8 MHz crystal oscillator
+-miscellaneous connectors
 ## Used software tools:
 - Atmel Studio 8.0 (Microchip Studio)
 - Altium designer (CAD for PCB design)
@@ -50,7 +53,6 @@ This project shows how to create astepper motor controller and program it using 
 ## Programing languages used:
 - Assembly (AVR instruction set)
 - C
-
 
 ## Components discription
 ### Stepper motor
@@ -74,7 +76,51 @@ as we did in the project. </li>
 </div>
 
   <hr>
+ ### Atmega32 microcontroller (AVR Architecture)
+<img src="atmega32_datasheet (1).jpg" align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+  -ATmega32 is a powerful microcontroller because of its in system self programmable flash on a monolithic chip
+  -provides a high flexible and cost effective solution to many embedded control applications.
+  CPU
+
+-8-bit AVR
+-Number of Pins: 40
+-Operating Voltage (V): +4.5 to +5.5 V (+5.5V being absolute maximum)
+-Number of I/O pins: 32
+-Communication Interface: 
+      * JTAG Interface(24,25,26,27 PINS)[Can be used for programming this controller] 
+      * Master/Slave SPI Serial Interface(5,6,7,8 PINS) [Can be used for programming this controller]
+      * Programmable Serial USART(14,15 PINS) [Can be used for programming this controller]
+      * Two-wire Serial Interface(22,23 PINS)[Can be used to connect peripheral devices like sensors and LCDs]
+-ADC Module: 8 channels , 10-bit resolution ADC
+-Timer Module: Two 8-bit counters, One 16-bit counter [Total three]
+-Analog Comparators: 1
+-DAC Module: Nil
+-PWM channels: 4
+-External Oscillator: 0-8MHz for ATMEGA32L / 0-16MHz for ATMEGA32
+-Internal Oscillato: 0-8MHz  Calibrated Internal Oscillator
+-Program Memory Type: Flash
+-Program Memory (KB): 32Kbytes[10000 write/erase cycles]
+-CPU Speed (MIPS): 16 MIPS
+-RAM Bytes: 2KBytes
+-Data EEPROM: 1024 Bytes
+-Watchdog Timer: Programmable Watchdog Timer with Separate On-chip  Oscillator
+-Power Save Modes: Six Modes[Idle, ADC Noise Reduction, Power-save, Power-down, Standby and Extended Standby]
+-Operating Temperature : -55°C to +125°C(+125 being absolute maximum, -55 being absolute m
+  <ul>
+    <li><h5>unipolar :- </h5> has 5 or 6 wires ,this happens by tying each 2 coils from one end 
+then there are 2 common wires as shown  , unipolar can be used as bipolar 
+as we did in the project. </li>
+  <li><h5>Bipolar :- </h5> has only 4 wires comming out from two coils ,there is no common wires , it can't be used as unipolar </li>
+  </ul>
+</p>
+  </span>
   
+</div>
+
+
  ## Controlling the motor's speed
 
 In our circuit we can control the speed of the motor by two different ways, the first way was through change (half / full) cycle switch and the second way was through change the potentiometer slider place and we can use the two ways in same time. the two ways have different techniques to change speed which :
