@@ -124,17 +124,23 @@ In this way we control the position of Motor (rotation angle) by changing the po
 
 </br>
 
-### ULN2003A (driver)
-<img src="images/ULN2003A.jpg" align="right" >
+### ULN2003A
+<img src="    " align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
 
   
   <ul>
-    <li>
+    
+  - The ULN2003A and is high voltage, high
+current Darlington arrays
+- Each containing seven open collector
+common emitter pairs.
+- Each pair is rated at 500mA. 
+- Suppression diodes are included for inductive load driving, the inputs and outputs
+are pinned in opposition to simplify board layout.
   
-  </li>
 </ul>
 </p>
   </span>
@@ -142,6 +148,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 </div>
 
   <hr>
+  
   ### 5V boost converter
 <img src="    " align="right" >
 <div style="display:inline-block; ">
