@@ -10,12 +10,12 @@
 
 
 	; define motor pins			
-	.equ A1				 = PD4
-	.equ A2				 = PD5
-	.equ B1				 = PD6
-	.equ B2				 = PD7
-	.equ MOTOR			 = PORTD
-	.equ MotorDataD		 = DDRD
+	.equ A1				 = PC0
+	.equ A2				 = PC1
+	.equ B1				 = PC3
+	.equ B2				 = PC2
+	.equ MOTOR			 = PORTC
+	.equ MotorDataD		 = DDRC
 
 
 
@@ -31,10 +31,10 @@
 
 
 ;******************************* Stack intialization****************************
-			ldi	r21,LOW(RAMEND)		; initialize 
-			out	SPL,r21				; stack pointer ;do not need to save r21
-			ldi	r21,HIGH(RAMEND)	; to RAMEND
-			out	SPH,r21				; "				;do not need to save r21
+			ldi	r30,LOW(RAMEND/2)		; initialize 
+			out	SPL,r30				; stack pointer ;do not need to save r30
+			ldi	r30,HIGH(RAMEND/2)	; to RAMEND
+			out	SPH,r30				; "				;do not need to save r30
 ;********************************************************************************
 		
 	
@@ -43,11 +43,10 @@
 		; Set portD as an output
 		 ser r16	   
 		 out MotorDataD, r16			;do not need to save r16
-		 
+		 out PORTB, r16
 		 clr r16
 		 out DDRB, r16
-		 sbi PORTB, 0			; Enable internal pullup for pin PB0
-		 sbi PORTB, 1			; Enable internal pullup for pin PB1
+		
 ;***************************************************************************
 
 
@@ -55,9 +54,6 @@
 ;*********************************Intialize Variables************************
 		clr r16							; do not need to save r16
 		sts current, r16				; intialize current motor position to 0
-						
-		ldi r16, 5						;do not need to save r16
-		sts delaySingleStepping, r16	; intialize delay of single steps to 5
 ;******************************************************************************
 
 
@@ -72,46 +68,48 @@
 
 		
 start:							; Start of the loop
-
+		;clr r16
+		;out PORTC, r16
 
 		; Check mode at the beining of each cycle
 
 
-		in Mode, PINB			; Read PortB actual values in Mode
+		in Mode, PINB			; Read PortB actual values in Mode  
 		andi Mode, 3
 
 
-		ldi r25, 0
-		cp Mode, r25			; Subtract 0 from mode to compare with 0
+		
+		cpi Mode, 0				; Subtract 0 from mode to compare with 0
 		breq mode3				; if Sw == 00 jump to mode 3
 
 
 		
-		ldi r25, 1
-		cp Mode, r25
+		
+		cpi Mode, 1
 		breq mode2				; if Sw == 01 jump to mode 2
 
 		
-
-		ldi r25, 2
-		cp Mode, r25 
+		
+		
+		cpi Mode, 2 
 		breq mode1				; if Sw == 10 jump to mode 1
 
 	
-
-		ldi r25, 3
-		cp Mode, r25
-		breq start				; if Sw == 11 jump to mode 0
+		
+		
+		cpi Mode, 3
+		breq mode0				; if Sw == 11 jump to mode 0
 
 		
 		
 
 
 ;*************************************************Mode0****************************************
-
+mode0:
 								; Mode0: do nothing
-
-
+		clr r16
+		out PORTC, r16			; turn all coils off
+		rjmp start
 ;**********************************************************************************************
 
 
@@ -121,7 +119,7 @@ start:							; Start of the loop
 mode1:							; Mode1: Full stepping
 								; X steps forward at speed ?, then Y steps reverse at speed?
 
-		ldi r29, 50				; Intialize a counter
+		ldi r29, 20				; Intialize a counter
 
 forwardStep:
 
@@ -133,7 +131,7 @@ forwardStep:
 		brne start				; Jump to "Start"
 		
 		
-
+		
 		rcall  FullStep			; If Mode is not changed, proceed with current mode
 	
 
@@ -141,9 +139,9 @@ forwardStep:
 		dec r29					; Decrement Steps counter
 		brne forwardStep		; Repeat till X steps is done
 
+		 
 
-
-		ldi r29, 50				; Intialize counter for reverse steps
+		ldi r29, 20				; Intialize counter for reverse steps
 
 reverseStep:
 
@@ -154,6 +152,7 @@ reverseStep:
 		subi Mode, 2			; If Mode is changed (!= 2),
 		brne start				; Jump to "Start"
 
+		
 		
 
 		rcall FullStepReverse	; If Mode is not changed, proceed with current mode
@@ -175,7 +174,7 @@ mode2:							; Mode2: Half Stepping
 
 
 
-		ldi r29, 5				; Intialize a counter
+		ldi r29, 20				; Intialize a counter
 
 forwardHalf:
 
@@ -190,7 +189,7 @@ forwardHalf:
 		dec r29					; Decrement Steps counter
 		brne forwardHalf		; Repeat till X steps is done
 
-		ldi r29, 5				; Intialize a counter
+		ldi r29, 20				; Intialize a counter
 
 reverseHalf:
 
@@ -242,24 +241,21 @@ mode3:							; Mode3: Control Position with a Potentiometer
 
 ;****************************************ADC ISR***************************************************
 ADCDoneISR:
-
-		  push r16				; Save r16 before starting ISR
+		  
 
 		  ;read ADC here
 		  in ADCResL, ADCL		; Read ADC converion result
 		  in ADCResH, ADCH
 		  rcall ADCStartConv	; to start a new conversion as soon as the old one is done
 
-		  pop r16				; Retrieve r16
 		   
 		  reti					
 
 ;******************************************************************************************
 
 
-	.dseg
+	.dseg									 ; Data segment start
 
 	
-	current: .byte 1			 ; hold current position in steps
-	divResult: .byte 1			 ; holds division result
-	delaySingleStepping: .byte 1 ; hold delay value for single stepping
+	current:			 .byte 1			 ; hold current position in steps
+	target:				 .byte 1			 ; hold Traget position in steps
