@@ -13,7 +13,7 @@
 
 ## Quick start
 
-- in order to run the [circuit](https://github.com/seif-1999/Stepper-Controller-using-Assembly) you have to install at least proteus vertion 7 . 
+- in order to run the [circuit](https://github.com/seif-1999/Stepper-Controller-using-Assembly) you have to install at least proteus vertion 7. 
 - Clone the repo: `git clone https://github.com/seif-1999/Stepper-Controller-using-Assembly.git`
 
 
@@ -21,6 +21,7 @@
 -Stepper motor is a brushless DC motor that divides the full rotation angle of 360° into a number of equal steps.
 -The motor is rotated by applying a certain sequence of control signals. 
 -The speed of rotation can be changed by changing the rate at which the control signals are applied.
+-The rotation angle is controlled by the potentiometer.
 -Various stepper motors with different step angles and torque ratings are available in the market.
 -A microcontroller can be used to apply different control signals to the motor to make it rotate according to the need of the application.
 
@@ -80,12 +81,12 @@ In our circuit we can control the speed of the motor by two different ways, the 
 
 - **(half / full) cycle switch :** change the speed of the motor only in two modes the full cycle and the half cycle mode , and it can be achieved by making two arrays of steps and by using one of them with the stepper motor it will step corresponding to the selected array and the array selected according to the (half / full) cycle switch.
  ```
-STEPS  DB       00000011B,              ; Full Step Mode Array
+STEPS  DB        00000011B,              ; Full Step Mode Array
                  00000110B, 
                  00001100B, 
                  00001001B   
 
-HSTEPS DB       00000001B,      	; Half Step Mode Array
+HSTEPS DB        00000001B,      	       ; Half Step Mode Array
                  00000011B, 
                  00000010B, 
                  00000110B, 
@@ -94,17 +95,15 @@ HSTEPS DB       00000001B,      	; Half Step Mode Array
                  00001000B,
                  00001001B
  ``` 
-- **the Potentiometer Slider :** in this way we control the speed by really different technique as we change the value of delay between the steps sent to the motor , there are 11 values we can obtained through the Potentiometer by using ADC converter to convert the analog value of the potentiometer to digital value we can use and obtain delay value from it , the range of the delay value (06FFH - 185CH).
-
--  By using the both way in same time we can obtain 22  mode for the motor's speed by different values of delay.
+- **the Potentiometer Slider :** in this way we control the position of Motor (rotation angle) by changing the position of the potentiometer slider , there are 4 values we can obtain through the Potentiometer by using ADC converter to convert the analog value of the potentiometer to digital value, the result will be subtracted from current position, and the reminder of result divided by 4 will be the control value that will determine the active mode.
 
 </br>
 
 
 ## Team members
-- [Seif Ehab](https://github.com/seif-1999)
+- [Seif El-Din Ehab](https://github.com/seif-1999)
 - [Amina Farouk](https://github.com/aminafarouk1)
 - [Rowan Mohamed Naguib](https://github.com/rowannaguib)
-- [Ahmed Mohamed Sayed](https://github.com/ahmedtolba06)
-- [Seif El-din Ragab](https://github.com/Seifeldin5)
+- [Ahmed Mohamed Sayed Tolba](https://github.com/ahmedtolba06)
+- [Seif-Eldin Ragab](https://github.com/Seifeldin5)
  
