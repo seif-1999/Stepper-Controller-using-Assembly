@@ -256,25 +256,142 @@ are pinned in opposition to simplify board layout.
 
   <hr>
 
- ## Controlling the motor's speed
-
-In our circuit we can control the speed of the motor by two different ways, the first way was through change (half / full) cycle switch and the second way was through change the potentiometer slider place and we can use the two ways in same time. the two ways have different techniques to change speed which :
-
-- **(half / full) cycle switch :** change the speed of the motor only in two modes the full cycle and the half cycle mode , and it can be achieved by making two arrays of steps and by using one of them with the stepper motor it will step corresponding to the selected array and the array selected according to the (half / full) cycle switch.
+## Modes of operation
+- There is 4 modes of operation (0, 1, 2, 3), those can be determined depending on the values of register PINB whose value is chosen by selecting different configuration form DIP switch 1, where 00 = mode0, 01 = mode1, 10 = mode2, 11 = mode2.
+- This section of code reads PINB register and determine which mode to select.
+ 
  ```
-STEPS  DB        00000011B,              ; Full Step Mode Array
-                 00000110B, 
-                 00001100B, 
-                 00001001B   
+  ; Check mode at the beining of each cycle
 
-HSTEPS DB        00000001B,      	       ; Half Step Mode Array
-                 00000011B, 
-                 00000010B, 
-                 00000110B, 
-                 00000100B, 
-                 00001100B, 
-                 00001000B,
-                 00001001B
+
+		in Mode, PINB			; Read PortB actual values in Mode  
+		andi Mode, 3
+
+		cpi Mode, 0				; Subtract 0 from mode to compare with 0
+		breq mode3				; if Sw == 00 jump to mode 3
+
+		cpi Mode, 1
+		breq mode2				; if Sw == 01 jump to mode 2
+
+		cpi Mode, 2 
+		breq mode1				; if Sw == 10 jump to mode 1
+	
+		cpi Mode, 3
+		breq mode0				; if Sw == 11 jump to mode 0
+ ```
+### Mode0
+- In this mode we basically do nothing, just turn off all motor coils to preserve power.
+```
+;*************************************************Mode0****************************************
+mode0:
+								; Mode0: do nothing
+		clr r16
+		out PORTC, r16			; turn all coils off
+		rjmp start
+;**********************************************************************************************
+
+ ```
+### Mode1
+- In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
+
+
+```
+;*************************************************Mode1****************************************
+
+mode1:							; Mode1: Full stepping
+								; X steps forward at speed ?, then Y steps reverse at speed?
+
+		ldi r29, 20				; Intialize a counter
+
+forwardStep:
+
+		in Mode, PINB			; Read PortB actual value to make sure no change in mode occured
+		andi Mode, 3			; mask to read only the first two bits of PINB register
+
+		subi Mode, 2			; If Mode is changed,
+		brne start				; Jump to "Start"
+		
+		rcall  FullStep			; If Mode is not changed, proceed with current mod
+		
+		dec r29					; Decrement Steps counter
+		brne forwardStep		; Repeat till X steps is done
+
+		ldi r29, 20				; Intialize counter for reverse steps
+
+reverseStep:
+
+		in Mode, PINB			; Read PortB actual value to make sure no change in mode occured
+		andi Mode, 3			; mask to read only the first two bits of PINB register
+		 
+		subi Mode, 2			; If Mode is changed (!= 2),
+		brne start				; Jump to "Start"
+
+		rcall FullStepReverse	; If Mode is not changed, proceed with current mode
+		
+		dec r29				; Decrement Steps counter
+		brne reverseStep		; Repeat till Y steps is done
+		
+		rjmp start				; Jump to the start of the main loop when done
+		
+;**********************************************************************************************
+
+ ```
+### Mode2
+- This mode is very close to mode1 except that it uses Half step increments.
+```
+;*************************************************Mode2****************************************
+
+mode2:							; Mode2: Half Stepping
+								; X half steps forward at speed ?, then Y half steps reverse at speed?
+
+		ldi r29, 20				; Intialize a counter
+
+forwardHalf:
+
+		in Mode, PINB			; Read PortB actual value to make sure no change in mode occured
+		andi Mode, 3			; mask to read only the first two bits of PINB register
+
+		subi Mode, 1			; If Mode is changed (!== 1),
+		brne start				; Jump to "Start"
+    
+		rcall  HalfStep			; If Mode is not changed, proceed with current mode
+		dec r29					; Decrement Steps counter
+		brne forwardHalf		; Repeat till X steps is done
+
+		ldi r29, 20				; Intialize a counter
+
+reverseHalf:
+
+		in Mode, PINB			; Read PortB actual value to make sure no change in mode occured
+		andi Mode, 3			; mask to read only the first two bits of PINB register
+		subi Mode, 1			; If Mode is changed (!== 1),
+		brne start				; Jump to "Start"
+
+		rcall HalfStepReverse	; If Mode is not changed, proceed with current mode
+		dec r29					; Decrement Steps counter
+		brne reverseHalf		; Repeat till Y steps is done
+
+		rjmp start				; Jump to the start of the main loop when done
+		
+;**********************************************************************************************
+
+ ```
+### Mode3
+- This mode read the potentiometer value (0-5V) using an ADC to convert it a digital represnted range (0-255).
+- The digital reprsented range (0-255) is then mapped to range of position in terms of steps (0-200) to determine the target position of the motor.
+
+
+
+ 
+ ```
+;*************************************************Mode3****************************************
+
+mode3:							; Mode3: Control Position with a Potentiometer
+
+
+		rjmp  posAdjst			;Jump to posAdjst subroutine to calculate and move to target postion
+
+;**********************************************************************************************
  ``` 
 
 
