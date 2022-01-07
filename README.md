@@ -54,7 +54,7 @@ This project shows how to create astepper motor controller and program it using 
 
 ## Components discription
 ### Stepper motor
-<img src="STEPPER%20MOTOR.PNG" align="right" >
+<img src="STEPPER MOTOR.png" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
