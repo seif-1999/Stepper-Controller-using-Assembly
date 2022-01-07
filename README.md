@@ -39,8 +39,8 @@ This project shows how to create astepper motor controller and program it using 
 ## Used hardware components:
 -Stepper Motor
 -Atmega32 microcontroller (AVR Architecture)
--ULN2003A (driver)
 -Potentiometer
+-ULN2003A (driver)
 -5V boost converter
 -Li-ion battery
 -2-pin DIP switch
@@ -110,16 +110,128 @@ as we did in the project. </li>
 -Power Save Modes: Six Modes[Idle, ADC Noise Reduction, Power-save, Power-down, Standby and Extended Standby]
 -Operating Temperature : -55°C to +125°C(+125 being absolute maximum, -55 being absolute m
   <ul>
-    <li><h5>unipolar :- </h5> has 5 or 6 wires ,this happens by tying each 2 coils from one end 
-then there are 2 common wires as shown  , unipolar can be used as bipolar 
-as we did in the project. </li>
-  <li><h5>Bipolar :- </h5> has only 4 wires comming out from two coils ,there is no common wires , it can't be used as unipolar </li>
+</p>
+  </span>
+  
+</div>
+### the Potentiometer Slider
+In this way we control the position of Motor (rotation angle) by changing the position of the potentiometer slider , there are 4 values we can obtain through the Potentiometer by using ADC converter to convert the analog value of the potentiometer to digital value, the result will be subtracted from current position, and the reminder of result divided by 4 will be the control value that will determine the active mode.
+
+</br>
+
+### ULN2003A (driver)
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li>
+  
+  </li>
+</ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  ### 5V boost converter
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li> 
+  
+  </li>
   </ul>
 </p>
   </span>
   
 </div>
 
+  <hr>
+  
+  ### Li-ion battery
+
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li>
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  
+  ### 2-pin DIP switch
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li>
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  
+  ### 8 MHz crystal oscillator
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li>
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  ### Miscellaneous connectors
+<img src="    " align="right" >
+<div style="display:inline-block; ">
+  <span style="width:74%;float:left; display:inline-block;">
+<p>
+
+  
+  <ul>
+    <li> 
+  
+  </li>
+  </ul>
+</p>
+  </span>
+  
+</div>
+
+  <hr>
+  
 
  ## Controlling the motor's speed
 
@@ -141,9 +253,6 @@ HSTEPS DB        00000001B,      	       ; Half Step Mode Array
                  00001000B,
                  00001001B
  ``` 
-- **the Potentiometer Slider :** in this way we control the position of Motor (rotation angle) by changing the position of the potentiometer slider , there are 4 values we can obtain through the Potentiometer by using ADC converter to convert the analog value of the potentiometer to digital value, the result will be subtracted from current position, and the reminder of result divided by 4 will be the control value that will determine the active mode.
-
-</br>
 
 
 ## Team members
