@@ -36,7 +36,7 @@
 - Bipolar / Unipolar Stepper Motor (200 steps, 1.8 degree/step)
 - Atmega32 microcontroller (AVR Architecture)
 - Potentiometer
-- ULN2003A (driver)
+- ULN2003A
 - 5V boost converter
 - 3.7V Li-ion battery
 - 2-pin DIP switch
