@@ -311,8 +311,8 @@ mode0:
 ### Mode1
 - In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
 
-<img src="Images/full.jpg" align="right"   > <br> <br>
-<img src="Images&GIFs/Mode1.gif" align="right"   >
+<img src="Images/full.jpg" align="right" width="200" height="200"   > <br> <br>
+<img src="Images&GIFs/Mode1.gif" align="right"  width="400" height="300"  >
 
 
  ```
@@ -359,8 +359,8 @@ reverseStep:
  ```
 ### Mode2
 - This mode is very close to mode1 except that it uses Half step increments.
-<img src="Images/half.jpg" align="right"  > <br> <br>
-<img src="Images&GIFs/Mode2.gif" align="right"  >
+<img src="Images/half.jpg" align="right"  width="200" height="200" > <br> <br>
+<img src="Images&GIFs/Mode2.gif" align="right"  width="400" height="300" >
 
 
  ```
@@ -406,7 +406,7 @@ reverseHalf:
 - This mode read the potentiometer value (0-5V) using an ADC to convert it a digital represnted range (0-255).
 - The digital reprsented range (0-255) is then mapped to range of position in terms of steps (0-200) to determine the target position of the motor.
 
-<img src="Images&GIFs/Mode3.gif" align="right"  >
+<img src="Images&GIFs/Mode3.gif" align="right"  width="400" height="300"  >
 
  
 
