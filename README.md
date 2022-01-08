@@ -1,3 +1,4 @@
+
 # Stepper-Driver-using-Assembly
 
 
@@ -28,9 +29,6 @@
 
 
 
-
-
-
 ## Used hardware components:
 - Bipolar / Unipolar Stepper Motor (200 steps, 1.8 degree/step)
 - Atmega32 microcontroller (AVR Architecture)
@@ -53,6 +51,7 @@
 ## Components discription
 ### Stepper motor
 <img src="Images/STEPPER MOTOR.png" align="right" >
+
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -75,6 +74,7 @@ as we did in the project. </li>
   
  ### Atmega32 microcontroller (AVR Architecture)
 <img src="Images/atmega32_datasheet (1).jpg" align="right"  >
+
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -120,12 +120,13 @@ as we did in the project. </li>
 </div>
 ### Potentiometer
 <img src="Images/Pot.jpg" align="right" alt="Pot" width="300"/>
+
 In this way we control the position of Motor (rotation angle) by changing the position of the potentiometer, a range between 0-5V (0-255) can be obtained through the potentiometer by using ADC converter to convert the analog value (0-5V) of the potentiometer to digital value (0-255) and the result is mapped to position (step 0-200), the target position will be subtracted from motor current position to determine the direction and number of stepps to move, and the reminder of target position divided by 4 will be used to determine the appropriate step sequence.
 
 </br>
 
-### ULN2003A
-<img src="Images/ULN2003A.jpg" align="right" width="400"/ >
+### ULN2003A (driver)
+<img src="images/ULN2003A.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -141,6 +142,9 @@ common emitter pairs.
 - Suppression diodes are included for inductive load driving, the inputs and outputs
 are pinned in opposition to simplify board layout.
   
+    <li>
+  
+  </li>
 </ul>
 </p>
   </span>
@@ -174,6 +178,9 @@ are pinned in opposition to simplify board layout.
 - Over temperature protection (OTP)
 
   
+    <li> 
+  
+  </li>
   </ul>
 </p>
   </span>
@@ -189,8 +196,6 @@ are pinned in opposition to simplify board layout.
   <span style="width:74%;float:left; display:inline-block;">
 <p>
 
-  
- 
 </p>
   </span>
   
@@ -205,7 +210,6 @@ are pinned in opposition to simplify board layout.
 <p>
 
   
-
 </p>
   </span>
   
@@ -237,9 +241,7 @@ are pinned in opposition to simplify board layout.
   <span style="width:74%;float:left; display:inline-block;">
 <p>
 
-  
-  <
-</p>
+ </p>
   </span>
   
 </div>
@@ -248,7 +250,6 @@ are pinned in opposition to simplify board layout.
   
 
  ## Modes of operation
- <img src="Images/Connectors.jpg" align="right" alt="Connectors" width="300"/ >
 - There is 4 modes of operation (0, 1, 2, 3), those can be determined depending on the values of register PINB whose value is chosen by selecting different configuration form DIP switch 1, where 00 = mode0, 01 = mode1, 10 = mode2, 11 = mode2.
 - This section of code reads PINB register and determine which mode to select.
  
@@ -385,7 +386,8 @@ mode3:							; Mode3: Control Position with a Potentiometer
 		rjmp  posAdjst			;Jump to posAdjst subroutine to calculate and move to target postion
 
 ;**********************************************************************************************
- ``` 
+
+
 
 
 ## Team members
