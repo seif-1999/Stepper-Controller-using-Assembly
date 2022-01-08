@@ -126,7 +126,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 </br>
 
 ### ULN2003A (driver)
-<img src="images/ULN2003A.jpg" align="right" >
+<img src="Images/ULN2003A.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -191,7 +191,7 @@ are pinned in opposition to simplify board layout.
   
   ### Li-ion battery
 
-<img src="Images/li-ion Battery.jpg" align="center"  >
+<img src="Images/li-ion battery.jpg" align="center"  >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -204,7 +204,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 2-pin DIP switch
-<img src="Images/2-Pin dip Switch.jpg" align="center"  >
+<img src="Images/2-pin dip switch.jpg" align="center"  >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -218,7 +218,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 8 MHz crystal oscillator
-<img src="Images/Crystal.jpg"  >
+
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -231,12 +231,14 @@ are pinned in opposition to simplify board layout.
   </ul>
 </p>
   </span>
-  
+ <img src="Images/Crystal.jpg"  > 
 </div>
 
   <hr>
+  
+  
   ### Miscellaneous connectors
-<img src="Images/Connectors.jpg" align="center" alt="Connectors" width="300"/ >
+<img src="Images/Connectors.jpg" align="right" alt="Connectors" width="200"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -287,7 +289,7 @@ mode0:
 ### Mode1
 - In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
 
-<img src="Images&GIFs/Mode1.gif" align="right"  >
+<img src="Images&GIFs/Mode1.gif" align="right"   >
 ```
 ;*************************************************Mode1****************************************
 
