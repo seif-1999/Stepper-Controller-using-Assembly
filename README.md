@@ -58,7 +58,7 @@
  
   <ul>
     <li> 
-  <br> <br> <br> 
+  <br> <br> <br> <br> <br>
   </li>
   </ul>
 </p>
@@ -66,11 +66,11 @@
   
 </div>
 
-  <hr>
+  <br> <br><hr> 
 ## Components discription
 
 ### Stepper motor
-<br> <img src="STEPPER MOTOR.png" align="right"  width="300" 
+<img src="STEPPER MOTOR.png" align="right"  width="300" 
      height="300" > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
@@ -144,7 +144,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 
 ### ULN2003A (driver)
 <br> <br> <img src="Images/ULN2003A.jpg" align="right"  width="300" 
-     height="300" >
+     height="200" >
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
