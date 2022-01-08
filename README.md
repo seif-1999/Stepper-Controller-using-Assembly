@@ -74,7 +74,7 @@ as we did in the project. </li>
   <hr>
   
  ### Atmega32 microcontroller (AVR Architecture)
-<img src="Images/atmega32_datasheet (1).jpg" align="right" alt="atmega32_datasheet (1)" width="300"/ >
+<img src="Images/atmega32_datasheet (1).jpg" align="right"  >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -125,7 +125,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 </br>
 
 ### ULN2003A
-<img src="Images/ULN2003A.jpg" align="right" alt="ULN2003A" width="300"/ >
+<img src="Images/ULN2003A.jpg" align="right" width="400"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -184,17 +184,13 @@ are pinned in opposition to simplify board layout.
   
   ### Li-ion battery
 
-<img src="Images/Li-ion Battery.jpg" align="center" alt="Li-ion Battery" width="200"/ >
+<img src="Images/Li-ion Battery.jpg" align="center" alt="Li-ion Battery" width="400"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
 
   
-  <ul>
-    <li>
-  
-  </li>
-  </ul>
+ 
 </p>
   </span>
   
@@ -203,17 +199,13 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 2-pin DIP switch
-<img src="Images/2-Pin DIP Switch.jpg" align="center" alt="2-Pin DIP Switch" width="200"/ >
+<img src="Images/2-Pin DIP Switch.jpg" align="center" alt="2-Pin DIP Switch" width="400"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
 
   
-  <ul>
-    <li>
-  
-  </li>
-  </ul>
+
 </p>
   </span>
   
@@ -246,9 +238,7 @@ are pinned in opposition to simplify board layout.
 <p>
 
   
-  <ul>
-    
-  </ul>
+  <
 </p>
   </span>
   
@@ -258,6 +248,7 @@ are pinned in opposition to simplify board layout.
   
 
  ## Modes of operation
+ <img src="Images/Connectors.jpg" align="right" alt="Connectors" width="300"/ >
 - There is 4 modes of operation (0, 1, 2, 3), those can be determined depending on the values of register PINB whose value is chosen by selecting different configuration form DIP switch 1, where 00 = mode0, 01 = mode1, 10 = mode2, 11 = mode2.
 - This section of code reads PINB register and determine which mode to select.
  
@@ -295,7 +286,7 @@ mode0:
 ### Mode1
 - In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
 
-
+<img src="Images&GIFs/Mode1.gif" align="right"  >
 ```
 ;*************************************************Mode1****************************************
 
@@ -339,6 +330,7 @@ reverseStep:
  ```
 ### Mode2
 - This mode is very close to mode1 except that it uses Half step increments.
+<img src="Images&GIFs/Mode2.gif" align="right"  >
 ```
 ;*************************************************Mode2****************************************
 
@@ -381,7 +373,7 @@ reverseHalf:
 - This mode read the potentiometer value (0-5V) using an ADC to convert it a digital represnted range (0-255).
 - The digital reprsented range (0-255) is then mapped to range of position in terms of steps (0-200) to determine the target position of the motor.
 
-
+<img src="Images&GIFs/Mode3.gif" align="right"  >
 
  
  ```
