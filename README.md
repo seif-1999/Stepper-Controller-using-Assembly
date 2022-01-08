@@ -75,8 +75,13 @@
 <img src="Images/STEPPER MOTOR.png" align="right" >
 
 
+
+<img src="Images/STEPPER MOTOR.png" align="right" >
+
+
 <img src="STEPPER MOTOR.png" align="right"  width="300" 
      height="300" >
+
 
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
@@ -103,8 +108,13 @@ as we did in the project. </li>
 <img src="Images/atmega32_datasheet (1).jpg" align="right"  >
 
 
+
+<img src="Images/atmega32_datasheet (1).jpg" align="right"  >
+
+
 <img src="atmega32_datasheet (1).jpg" align="right"  width="300" 
      height="300">
+
 
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
@@ -153,6 +163,11 @@ as we did in the project. </li>
 
 <img src="Images/Pot.jpg" align="right" alt="Pot" width="300"/>
 
+In this way we control the position of Motor (rotation angle) by changing the position of the potentiometer, a range between 0-5V (0-255) can be obtained through the potentiometer by using ADC converter to convert the analog value (0-5V) of the potentiometer to digital value (0-255) and the result is mapped to position (step 0-200), the target position will be subtracted from motor current position to determine the direction and number of stepps to move, and the reminder of target position divided by 4 will be used to determine the appropriate step sequence.
+
+
+<img src="Images/Pot.jpg" align="right" alt="Pot" width="300"/>
+
 
 <img src="Images/Pot.jpg" align="right" alt="Pot" width="300" height="300"  >
 
@@ -162,8 +177,12 @@ In this way we control the position of Motor (rotation angle) by changing the po
 
 <img src="Images/ULN2003A.jpg" align="right" >
 
+
+<img src="Images/ULN2003A.jpg" align="right" >
+
 <img src="Images/ULN2003A.jpg" align="right"  width="300" 
      height="300" >
+
 
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
@@ -200,9 +219,15 @@ are pinned in opposition to simplify board layout.
 ### 5V boost converter
 <img src="Images/5V Boost.jpg" align="right" alt="5V Boost" width="300"/>
 
+
+  
+### 5V boost converter
+<img src="Images/5V Boost.jpg" align="right" alt="5V Boost" width="300"/>
+
   ### 5V boost converter
 <img src="Images/5V Boost.jpg" align="right"  width="300" 
      height="300" >
+
 
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
@@ -225,6 +250,7 @@ are pinned in opposition to simplify board layout.
 - Overvoltage protection (OVP)
 - Short circuit protection (SCP)
 - Over temperature protection (OTP)
+
 
     <li> 
   
@@ -297,6 +323,87 @@ are pinned in opposition to simplify board layout.
 
   <hr>
   
+
+ ## Modes of operation
+- There is 4 modes of operation (0, 1, 2, 3), those can be determined depending on the values of register PINB whose value is chosen by selecting different configuration form DIP switch 1, where 00 = mode0, 01 = mode1, 10 = mode2, 11 = mode2.
+- This section of code reads PINB register and determine which mode to select.
+ 
+ ```
+  ; Check mode at the beining of each cycle
+
+
+		in Mode, PINB			; Read PortB actual values in Mode  
+		andi Mode, 3
+
+		cpi Mode, 0				; Subtract 0 from mode to compare with 0
+		breq mode3				; if Sw == 00 jump to mode 3
+
+		cpi Mode, 1
+		breq mode2				; if Sw == 01 jump to mode 2
+
+		cpi Mode, 2 
+		breq mode1				; if Sw == 10 jump to mode 1
+	
+		cpi Mode, 3
+		breq mode0				; if Sw == 11 jump to mode 0
+ ```
+### Mode0
+- In this mode we basically do nothing, just turn off all motor coils to preserve power.
+```
+;*************************************************Mode0****************************************
+mode0:
+								; Mode0: do nothing
+		clr r16
+		out PORTC, r16			; turn all coils off
+		rjmp start
+;**********************************************************************************************
+
+ ```
+### Mode1
+- In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
+
+<img src="Images&GIFs/Mode1.gif" align="right"   >
+```
+;*************************************************Mode1****************************************
+
+mode1:							; Mode1: Full stepping
+								; X steps forward at speed ?, then Y steps reverse at speed?
+
+		ldi r29, 20				; Intialize a counter
+
+forwardStep:
+
+		in Mode, PINB			; Read PortB actual value to make sure no change in mode occured
+		andi Mode, 3			; mask to read only the first two bits of PINB register
+
+		subi Mode, 2			; If Mode is changed,
+		brne start				; Jump to "Start"
+		
+		rcall  FullStep			; If Mode is not changed, proceed with current mod
+		
+		dec r29					; Decrement Steps counter
+		brne forwardStep		; Repeat till X steps is done
+
+		ldi r29, 20				; Intialize counter for reverse steps
+
+reverseStep:
+
+		in Mode, PINB			; Read PortB actual value to make sure no change in mode occured
+		andi Mode, 3			; mask to read only the first two bits of PINB register
+		 
+		subi Mode, 2			; If Mode is changed (!= 2),
+		brne start				; Jump to "Start"
+
+		rcall FullStepReverse	; If Mode is not changed, proceed with current mode
+		
+		dec r29				; Decrement Steps counter
+		brne reverseStep		; Repeat till Y steps is done
+		
+		rjmp start				; Jump to the start of the main loop when done
+		
+;**********************************************************************************************
+
+ ```
 
 
  ## Modes of operation
@@ -397,15 +504,18 @@ reverseStep:
 
 
  ```
+
 ### Mode2
 - This mode is very close to mode1 except that it uses Half step increments.
 <img src="Images&GIFs/Mode2.gif" align="right"  >
 ```
 
+
  
 ### Mode2
 - This mode is very close to mode1 except that it uses Half step increments.
 <img src="Images&GIFs/Mode2.gif" align="right"  >
+
 
 
 ;*************************************************Mode2****************************************
@@ -447,6 +557,9 @@ reverseHalf:
 
  ```
 
+
+ ```
+
  
 
 ### Mode3
@@ -456,6 +569,12 @@ reverseHalf:
 <img src="Images&GIFs/Mode3.gif" align="right"  >
 
 
+ 
+ ```
+;*************************************************Mode3****************************************
+
+
+
  ```
 ;*************************************************Mode3****************************************
 
@@ -463,10 +582,13 @@ reverseHalf:
 ****************Mode3*************  
 
 
+
 mode3:							; Mode3: Control Position with a Potentiometer
 
 
 		rjmp  posAdjst			;Jump to posAdjst subroutine to calculate and move to target postion
+
+
 
 
 ;**********************************************************************************************
