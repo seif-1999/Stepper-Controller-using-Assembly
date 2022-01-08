@@ -203,8 +203,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
   <hr>
   ### Li-ion battery
 
-<img src="Images/li-ion battery.jpg" align="right"  width="300" 
-     height="300" > <br> <br>
+<img src="Images/li-ion battery.jpg" align="right"  width="150" 
+     height="150" > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -217,8 +217,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
   <hr>
   
   ### 2-pin DIP switch
-<img src="Images/2-pin dip switch.jpg" align="right"  width="300" 
-     height="300"  > <br> <br>
+<img src="Images/2-pin dip switch.jpg" align="right"  width="150" 
+     height="150"  > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -232,8 +232,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
   <hr>
   
   ### 8 MHz crystal oscillator
-   <img src="Images/Crystal.jpg" align="right"  width="300" 
-     height="300" > <br> <br>
+   <img src="Images/Crystal.jpg" align="right"  width="150" 
+     height="150" > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -253,8 +253,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
   
   
   ### Miscellaneous connectors
-<img src="Images&GIFs/Connectors.jpg" align="right" alt="Connectors" align="right"  width="300" 
-     height="300"/ > <br> <br>
+<img src="Images&GIFs/Connectors.jpg" align="right" alt="Connectors" align="right"  width="200" 
+     height="2000"/ > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
