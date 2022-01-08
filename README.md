@@ -191,7 +191,7 @@ are pinned in opposition to simplify board layout.
   
   ### Li-ion battery
 
-<img src="Images/Li-ion Battery.jpg" align="center" alt="Li-ion Battery" width="400"/ >
+<img src="Images/li-ion Battery.jpg" align="center"  >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
