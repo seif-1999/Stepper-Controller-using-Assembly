@@ -254,7 +254,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
   
   ### Miscellaneous connectors
 <img src="Images&GIFs/Connectors.jpg" align="right" alt="Connectors" align="right"  width="200" 
-     height="2000" > <br> <br>
+     height="200" > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
