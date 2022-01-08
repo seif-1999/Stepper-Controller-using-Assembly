@@ -127,7 +127,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 ### ULN2003A (driver)
 <img src="images/ULN2003A.jpg" align="right" >
 <div style="display:inline-block; ">
-  <span style="width:74%;float:left; display:inline-block;">
+  <span style="width:24%;float:left; display:inline-block;">
 <p>
 
   
@@ -145,7 +145,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
   ### 5V boost converter
 <img src="Images/5V Boost.jpg" align="right" >
 <div style="display:inline-block; ">
-  <span style="width:74%;float:left; display:inline-block;">
+  <span style="width:24%;float:left; display:inline-block;">
 <p>
 
   
