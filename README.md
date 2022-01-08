@@ -74,7 +74,7 @@ as we did in the project. </li>
   <hr>
   
  ### Atmega32 microcontroller (AVR Architecture)
-<img src="Images/atmega32_datasheet (1).jpg" align="right" >
+<img src="Images/atmega32_datasheet (1).jpg" align="right" alt="atmega32_datasheet (1)" width="300"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -119,13 +119,13 @@ as we did in the project. </li>
   
 </div>
 ### Potentiometer
-<img src="Images/Pot.jpg" align="right" >
+<img src="Images/Pot.jpg" align="right" alt="Pot" width="300"/>
 In this way we control the position of Motor (rotation angle) by changing the position of the potentiometer, a range between 0-5V (0-255) can be obtained through the potentiometer by using ADC converter to convert the analog value (0-5V) of the potentiometer to digital value (0-255) and the result is mapped to position (step 0-200), the target position will be subtracted from motor current position to determine the direction and number of stepps to move, and the reminder of target position divided by 4 will be used to determine the appropriate step sequence.
 
 </br>
 
 ### ULN2003A
-<img src="Images/ULN2003A.jpg" align="right" >
+<img src="Images/ULN2003A.jpg" align="right" alt="ULN2003A" width="300"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -150,7 +150,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
 ### 5V boost converter
-<img src="Images/5V Boost.jpg" align="right" >
+<img src="Images/5V Boost.jpg" align="right" alt="5V Boost" width="300"/>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -184,7 +184,7 @@ are pinned in opposition to simplify board layout.
   
   ### Li-ion battery
 
-<img src="Images/Li-ion Battery.jpg" align="right" >
+<img src="Images/Li-ion Battery.jpg" align="center" alt="Li-ion Battery" width="200"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -203,7 +203,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 2-pin DIP switch
-<img src="Images/2-Pin DIP Switch.jpg" align="right" >
+<img src="Images/2-Pin DIP Switch.jpg" align="center" alt="2-Pin DIP Switch" width="200"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -222,7 +222,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 8 MHz crystal oscillator
-<img src="Images/Crystal.jpg" align="right" >
+<img src="Images/Crystal.jpg" align="right" alt="Crystal" width="300"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -240,7 +240,7 @@ are pinned in opposition to simplify board layout.
 
   <hr>
   ### Miscellaneous connectors
-<img src="Images/Connectors.jpg" align="right" >
+<img src="Images/Connectors.jpg" align="center" alt="Connectors" width="300"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
