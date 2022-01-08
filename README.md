@@ -125,7 +125,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 </br>
 
 ### ULN2003A (driver)
-<img src="images/ULN2003A.jpg" align="right"  width="200" 
+<img src="Images/ULN2003A.jpg" align="right"  width="200" 
      height="200" >
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
