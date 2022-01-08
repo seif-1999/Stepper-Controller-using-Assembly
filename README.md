@@ -204,7 +204,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 2-pin DIP switch
-<img src="Images/2-Pin DIP Switch.jpg" align="center" alt="2-Pin DIP Switch" width="400"/ >
+<img src="Images/2-Pin dip Switch.jpg" align="center"  >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -218,7 +218,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 8 MHz crystal oscillator
-<img src="Images/Crystal.jpg" align="right" alt="Crystal" width="300"/ >
+<img src="Images/Crystal.jpg"  >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
