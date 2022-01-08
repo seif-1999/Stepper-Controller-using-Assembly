@@ -143,7 +143,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 
   <hr>
   ### 5V boost converter
-<img src="    " align="right" >
+<img src="Images/5V Boost.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -163,7 +163,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
   
   ### Li-ion battery
 
-<img src="    " align="right" >
+<img src="Images/Li-ion Battery.webp" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -182,7 +182,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
   <hr>
   
   ### 2-pin DIP switch
-<img src="    " align="right" >
+<img src="Images/2-Pin DIP Switch.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -201,7 +201,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
   <hr>
   
   ### 8 MHz crystal oscillator
-<img src="    " align="right" >
+<img src="Images/Crystal.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -218,26 +218,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 </div>
 
   <hr>
-  ### Miscellaneous connectors
-<img src="    " align="right" >
-<div style="display:inline-block; ">
-  <span style="width:74%;float:left; display:inline-block;">
-<p>
-
   
-  <ul>
-    <li> 
-  
-  </li>
-  </ul>
-</p>
-  </span>
-  
-</div>
-
-  <hr>
-  
-
  ## Controlling the motor's speed
 
 In our circuit we can control the speed of the motor by two different ways, the first way was through change (half / full) cycle switch and the second way was through change the potentiometer slider place and we can use the two ways in same time. the two ways have different techniques to change speed which :
