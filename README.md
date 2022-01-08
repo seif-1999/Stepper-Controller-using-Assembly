@@ -52,7 +52,7 @@
 
 ## Components discription
 ### Stepper motor
-<img src="STEPPER MOTOR.png" align="right" >
+<img src="Images/STEPPER MOTOR.png" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
