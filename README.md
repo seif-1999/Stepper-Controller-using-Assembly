@@ -55,10 +55,9 @@
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
- 
   <ul>
     <li> 
-  <br> <br> <br> <br> <br>
+  <br> <br> <br>
   </li>
   </ul>
 </p>
@@ -66,8 +65,10 @@
   
 </div>
 
-  <br> <br><hr> 
+  <br> <br>
+  <hr> 
 ## Components discription
+
 
 ### Stepper motor
 <img src="STEPPER MOTOR.png" align="right"  width="300" 
