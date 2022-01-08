@@ -311,7 +311,9 @@ mode0:
 ### Mode1
 - In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
 
+<img src="Images/full.jpg" align="right"   > <br> <br>
 <img src="Images&GIFs/Mode1.gif" align="right"   >
+
 
  ```
 ;*************************************************Mode1****************************************
@@ -357,7 +359,9 @@ reverseStep:
  ```
 ### Mode2
 - This mode is very close to mode1 except that it uses Half step increments.
+<img src="Images/half.jpg" align="right"  > <br> <br>
 <img src="Images&GIFs/Mode2.gif" align="right"  >
+
 
  ```
 ;*************************************************Mode2****************************************
