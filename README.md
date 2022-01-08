@@ -28,8 +28,7 @@
 - This project shows how to create a stepper motor controller using AVR microcontroller and program it using assembly.
 
 
-
-
+## PCP Schematic
 
 
 ## Used hardware components:
@@ -53,7 +52,8 @@
 
 ## Components discription
 ### Stepper motor
-<img src="STEPPER MOTOR.png" align="right" >
+<img src="STEPPER MOTOR.png" align="right"  width="300" 
+     height="300" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -75,7 +75,8 @@ as we did in the project. </li>
   <hr>
   
  ### Atmega32 microcontroller (AVR Architecture)
-<img src="atmega32_datasheet (1).jpg" align="right" >
+<img src="atmega32_datasheet (1).jpg" align="right"  width="300" 
+     height="300">
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -125,8 +126,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
 </br>
 
 ### ULN2003A (driver)
-<img src="Images/ULN2003A.jpg" align="right"  width="200" 
-     height="200" >
+<img src="Images/ULN2003A.jpg" align="right"  width="300" 
+     height="300" >
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
@@ -144,8 +145,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
 
   <hr>
   ### 5V boost converter
-<img src="Images/5V Boost.jpg" align="right"  width="200" 
-     height="200" >
+<img src="Images/5V Boost.jpg" align="right"  width="300" 
+     height="300" >
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
