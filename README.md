@@ -46,8 +46,6 @@
 ## Programing languages used:
 - Assembly (AVR instruction set)
 
-
-
 ## Components discription
 
 ### PCP Schematic
@@ -169,10 +167,10 @@ In this way we control the position of Motor (rotation angle) by changing the po
 
   <hr>
   ### 5V boost converter
-<br> <br><br><img src="Images/5V Boost.jpg" align="right"  width="300" 
+<br> <br><br> <br><img src="Images/5V Boost.jpg" align="right"  width="300" 
      height="300" >
 <div style="display:inline-block; ">
-  <span style="width:24%;float:left; display:inline-block;">
+  <span style="width:74%;float:left; display:inline-block;">
 <p>
 
   
@@ -205,8 +203,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
   <hr>
   ### Li-ion battery
 
-<br> <br><img src="Images/li-ion battery.jpg"align="right"  width="300" 
-     height="300"  >
+<img src="Images/li-ion battery.jpg" align="right"  width="300" 
+     height="300" > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -219,8 +217,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
   <hr>
   
   ### 2-pin DIP switch
-<br> <br><img src="Images/2-pin dip switch.jpg" align="right"  width="300" 
-     height="300"  >
+<img src="Images/2-pin dip switch.jpg" align="right"  width="300" 
+     height="300"  > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -234,7 +232,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
   <hr>
   
   ### 8 MHz crystal oscillator
-
+   <img src="Images/Crystal.jpg" align="right"  width="300" 
+     height="300" > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -247,16 +246,15 @@ In this way we control the position of Motor (rotation angle) by changing the po
   </ul>
 </p>
   </span>
- <img src="Images/Crystal.jpg" align="right"  width="300" 
-     height="300" > 
+
 </div>
 
   <hr>
   
   
   ### Miscellaneous connectors
-<img src="Images/Connectors.jpg" align="right" alt="Connectors" align="right"  width="300" 
-     height="300"/ >
+<img src="Images&GIFs/Connectors.jpg" align="right" alt="Connectors" align="right"  width="300" 
+     height="300"/ > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
