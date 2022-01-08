@@ -47,7 +47,10 @@
 - Assembly (AVR instruction set)
 
 
-## PCP Schematic
+
+## Components discription
+
+### PCP Schematic
 <img src="Images&GIFs/Schematic.PNG" align="right"  width="300" 
      height="300" >
 <img src="Images&GIFs/PCB 3D.PNG" align="center"  width="300" 
@@ -67,8 +70,6 @@
 
   <br> <br>
   <hr> 
-## Components discription
-
 
 ### Stepper motor
 <img src="STEPPER MOTOR.png" align="right"  width="300" 
