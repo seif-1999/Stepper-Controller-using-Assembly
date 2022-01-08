@@ -125,8 +125,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
 </br>
 
 ### ULN2003A (driver)
-<img src="images/ULN2003A.jpg" align="right"  width="400" 
-     height="500" >
+<img src="images/ULN2003A.jpg" align="right"  width="200" 
+     height="200" >
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
@@ -144,8 +144,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
 
   <hr>
   ### 5V boost converter
-<img src="Images/5V Boost.jpg" align="right"  width="400" 
-     height="500" >
+<img src="Images/5V Boost.jpg" align="right"  width="200" 
+     height="200" >
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
@@ -163,26 +163,6 @@ In this way we control the position of Motor (rotation angle) by changing the po
 
   <hr>
   
-  
-  ### 8 MHz crystal oscillator
-<img src="Images/Crystal.jpg" align="right"  width="400" 
-     height="500" >
-<div style="display:inline-block; ">
-  <span style="width:74%;float:left; display:inline-block;">
-<p>
-
-  
-  <ul>
-    <li>
-  
-  </li>
-  </ul>
-</p>
-  </span>
-  
-</div>
-
-  <hr>
   
  ## Controlling the motor's speed
 
