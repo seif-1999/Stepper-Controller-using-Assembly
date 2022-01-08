@@ -359,8 +359,8 @@ reverseStep:
  ```
 ### Mode2
 - This mode is very close to mode1 except that it uses Half step increments.
-<img src="Images/half.jpg" align="right"  width="400" height="200" > <br> <br> <br>
-<img src="Images&GIFs/Mode2.gif" align="right"  width="400" height="300" >
+<img src="Images/half.jpg" align="right"  width="300" height="200" > <br> <br> <br>
+<img src="Images&GIFs/Mode2.gif" align="right"  width="300" height="300" >
 
 
  ```
