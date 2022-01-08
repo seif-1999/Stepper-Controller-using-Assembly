@@ -131,7 +131,8 @@ In this way we control the position of Motor (rotation angle) by changing the po
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
-
+*The ULN2003A is an array of seven NPN Darlington transistors capable of 500 mA, 50 V output.
+*It features common-cathode flyback diodes for switching inductive loads. It can come in PDIP, SOIC, SOP or TSSOP packaging.
   
   <ul>
     <li>
