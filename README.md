@@ -28,7 +28,6 @@
 - This project shows how to create a stepper motor controller using AVR microcontroller and program it using assembly.
 
 
-
 ## Used hardware components:
 - Bipolar / Unipolar Stepper Motor (200 steps, 1.8 degree/step)
 - Atmega32 microcontroller (AVR Architecture)
@@ -50,16 +49,16 @@
 
 ## PCP Schematic
 <img src="Images&GIFs/Schematic.PNG" align="right"  width="300" 
-     height="300" > 
+     height="300" > <br> <br>
 <img src="Images&GIFs/PCB 3D.PNG" align="left"  width="300" 
-     height="300" >
+     height="300" > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
  
   <ul>
     <li> 
-  
+  <br> <br> <br> 
   </li>
   </ul>
 </p>
@@ -71,21 +70,11 @@
 ## Components discription
 
 ### Stepper motor
-
-<img src="Images/STEPPER MOTOR.png" align="right" >
-
-
-
-<img src="Images/STEPPER MOTOR.png" align="right" >
-
-
-<img src="STEPPER MOTOR.png" align="right"  width="300" 
-     height="300" >
-
-
+<br> <img src="STEPPER MOTOR.png" align="right"  width="300" 
+     height="300" > <br> <br>
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
-<p>
+<p> 
   - DC motor that move in discrete steps giving the illusion of rotation </br>
   - It divides the complete rotation into number of steps ,Each stepper motor will have fixed step angle</br>
   - This motor is drived by ULN2003A (Darlington array)</br>
@@ -104,18 +93,8 @@ as we did in the project. </li>
   <hr>
   
  ### Atmega32 microcontroller (AVR Architecture)
-
-<img src="Images/atmega32_datasheet (1).jpg" align="right"  >
-
-
-
-<img src="Images/atmega32_datasheet (1).jpg" align="right"  >
-
-
-<img src="atmega32_datasheet (1).jpg" align="right"  width="300" 
+<br><img src="atmega32_datasheet (1).jpg" align="right"  width="300" 
      height="300">
-
-
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -160,30 +139,12 @@ as we did in the project. </li>
   
 </div>
 ### Potentiometer
-
-<img src="Images/Pot.jpg" align="right" alt="Pot" width="300"/>
-
-In this way we control the position of Motor (rotation angle) by changing the position of the potentiometer, a range between 0-5V (0-255) can be obtained through the potentiometer by using ADC converter to convert the analog value (0-5V) of the potentiometer to digital value (0-255) and the result is mapped to position (step 0-200), the target position will be subtracted from motor current position to determine the direction and number of stepps to move, and the reminder of target position divided by 4 will be used to determine the appropriate step sequence.
-
-
-<img src="Images/Pot.jpg" align="right" alt="Pot" width="300"/>
-
-
-<img src="Images/Pot.jpg" align="right" alt="Pot" width="300" height="300"  >
-
+<br> <img src="Images/Pot.jpg" align="right" alt="Pot" width="300" height="300"  >
 In this way we control the position of Motor (rotation angle) by changing the position of the potentiometer, a range between 0-5V (0-255) can be obtained through the potentiometer by using ADC converter to convert the analog value (0-5V) of the potentiometer to digital value (0-255) and the result is mapped to position (step 0-200), the target position will be subtracted from motor current position to determine the direction and number of stepps to move, and the reminder of target position divided by 4 will be used to determine the appropriate step sequence.
 
 ### ULN2003A (driver)
-
-<img src="Images/ULN2003A.jpg" align="right" >
-
-
-<img src="Images/ULN2003A.jpg" align="right" >
-
-<img src="Images/ULN2003A.jpg" align="right"  width="300" 
+<br> <br> <img src="Images/ULN2003A.jpg" align="right"  width="300" 
      height="300" >
-
-
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
@@ -195,15 +156,6 @@ In this way we control the position of Motor (rotation angle) by changing the po
 - Suppression diodes are included for inductive load driving, the inputs and outputs are pinned in opposition to simplify board layout.
   
   <ul>
-    
-  - The ULN2003A and is high voltage, high
-current Darlington arrays
-- Each containing seven open collector
-common emitter pairs.
-- Each pair is rated at 500mA. 
-- Suppression diodes are included for inductive load driving, the inputs and outputs
-are pinned in opposition to simplify board layout.
-  
     <li>
   
   </li>
@@ -214,27 +166,16 @@ are pinned in opposition to simplify board layout.
 </div>
 
   <hr>
-
-  
-### 5V boost converter
-<img src="Images/5V Boost.jpg" align="right" alt="5V Boost" width="300"/>
-
-
-  
-### 5V boost converter
-<img src="Images/5V Boost.jpg" align="right" alt="5V Boost" width="300"/>
-
   ### 5V boost converter
-<img src="Images/5V Boost.jpg" align="right"  width="300" 
+<br> <br><br><img src="Images/5V Boost.jpg" align="right"  width="300" 
      height="300" >
-
-
 <div style="display:inline-block; ">
   <span style="width:24%;float:left; display:inline-block;">
 <p>
 
   
   <ul>
+       
 - 18650 Lithium Charge & Discharge Integrated Li-ion Battery 2A 5V With Battery Level Indicator
 
 - Charging voltage: DC4.5V-5.5V (recommended DC5V)
@@ -250,8 +191,6 @@ are pinned in opposition to simplify board layout.
 - Overvoltage protection (OVP)
 - Short circuit protection (SCP)
 - Over temperature protection (OTP)
-
-
     <li> 
   
   </li>
@@ -264,7 +203,8 @@ are pinned in opposition to simplify board layout.
   <hr>
   ### Li-ion battery
 
-<img src="Images/li-ion battery.jpg" align="center"  >
+<br> <br><img src="Images/li-ion battery.jpg"align="right"  width="300" 
+     height="300"  >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -277,7 +217,8 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 2-pin DIP switch
-<img src="Images/2-pin dip switch.jpg" align="center"  >
+<br> <br><img src="Images/2-pin dip switch.jpg" align="right"  width="300" 
+     height="300"  >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -304,14 +245,16 @@ are pinned in opposition to simplify board layout.
   </ul>
 </p>
   </span>
- <img src="Images/Crystal.jpg"  > 
+ <img src="Images/Crystal.jpg" align="right"  width="300" 
+     height="300" > 
 </div>
 
   <hr>
   
   
   ### Miscellaneous connectors
-<img src="Images/Connectors.jpg" align="right" alt="Connectors" width="200"/ >
+<img src="Images/Connectors.jpg" align="right" alt="Connectors" align="right"  width="300" 
+     height="300"/ >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -324,11 +267,13 @@ are pinned in opposition to simplify board layout.
   <hr>
   
 
+  
+
  ## Modes of operation
 - There is 4 modes of operation (0, 1, 2, 3), those can be determined depending on the values of register PINB whose value is chosen by selecting different configuration form DIP switch 1, where 00 = mode0, 01 = mode1, 10 = mode2, 11 = mode2.
 - This section of code reads PINB register and determine which mode to select.
  
- ```
+ 
   ; Check mode at the beining of each cycle
 
 
@@ -346,100 +291,9 @@ are pinned in opposition to simplify board layout.
 	
 		cpi Mode, 3
 		breq mode0				; if Sw == 11 jump to mode 0
- ```
-### Mode0
-- In this mode we basically do nothing, just turn off all motor coils to preserve power.
-```
-;*************************************************Mode0****************************************
-mode0:
-								; Mode0: do nothing
-		clr r16
-		out PORTC, r16			; turn all coils off
-		rjmp start
-;**********************************************************************************************
-
- ```
-### Mode1
-- In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
-
-<img src="Images&GIFs/Mode1.gif" align="right"   >
-```
-;*************************************************Mode1****************************************
-
-mode1:							; Mode1: Full stepping
-								; X steps forward at speed ?, then Y steps reverse at speed?
-
-		ldi r29, 20				; Intialize a counter
-
-forwardStep:
-
-		in Mode, PINB			; Read PortB actual value to make sure no change in mode occured
-		andi Mode, 3			; mask to read only the first two bits of PINB register
-
-		subi Mode, 2			; If Mode is changed,
-		brne start				; Jump to "Start"
-		
-		rcall  FullStep			; If Mode is not changed, proceed with current mod
-		
-		dec r29					; Decrement Steps counter
-		brne forwardStep		; Repeat till X steps is done
-
-		ldi r29, 20				; Intialize counter for reverse steps
-
-reverseStep:
-
-		in Mode, PINB			; Read PortB actual value to make sure no change in mode occured
-		andi Mode, 3			; mask to read only the first two bits of PINB register
-		 
-		subi Mode, 2			; If Mode is changed (!= 2),
-		brne start				; Jump to "Start"
-
-		rcall FullStepReverse	; If Mode is not changed, proceed with current mode
-		
-		dec r29				; Decrement Steps counter
-		brne reverseStep		; Repeat till Y steps is done
-		
-		rjmp start				; Jump to the start of the main loop when done
-		
-;**********************************************************************************************
-
- ```
-
-
- ## Modes of operation
-- There is 4 modes of operation (0, 1, 2, 3), those can be determined depending on the values of register PINB whose value is chosen by selecting different configuration form DIP switch 1, where 00 = mode0, 01 = mode1, 10 = mode2, 11 = mode2.
-- This section of code reads PINB register and determine which mode to select.
- 
-
- ```
-
-  ; Check mode at the beining of each cycle
-
-
-		in Mode, PINB			; Read PortB actual values in Mode  
-		andi Mode, 3
-
-		cpi Mode, 0				; Subtract 0 from mode to compare with 0
-		breq mode3				; if Sw == 00 jump to mode 3
-
-		cpi Mode, 1
-		breq mode2				; if Sw == 01 jump to mode 2
-
-		cpi Mode, 2 
-		breq mode1				; if Sw == 10 jump to mode 1
-	
-		cpi Mode, 3
-		breq mode0				; if Sw == 11 jump to mode 0
-
- ```
-### Mode0
-- In this mode we basically do nothing, just turn off all motor coils to preserve power.
-```
-
  
 ### Mode0
 - In this mode we basically do nothing, just turn off all motor coils to preserve power.
-
 
 ;*************************************************Mode0****************************************
 mode0:
@@ -449,19 +303,11 @@ mode0:
 		rjmp start
 ;**********************************************************************************************
 
-
- ```
-
  
-
 ### Mode1
 - In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
 
 <img src="Images&GIFs/Mode1.gif" align="right"   >
-
-```
-
-
 
 ;*************************************************Mode1****************************************
 
@@ -502,21 +348,10 @@ reverseStep:
 		
 ;**********************************************************************************************
 
-
- ```
-
-### Mode2
-- This mode is very close to mode1 except that it uses Half step increments.
-<img src="Images&GIFs/Mode2.gif" align="right"  >
-```
-
-
  
 ### Mode2
 - This mode is very close to mode1 except that it uses Half step increments.
 <img src="Images&GIFs/Mode2.gif" align="right"  >
-
-
 
 ;*************************************************Mode2****************************************
 
@@ -554,46 +389,21 @@ reverseHalf:
 		
 ;**********************************************************************************************
 
-
- ```
-
-
- ```
-
  
-
 ### Mode3
 - This mode read the potentiometer value (0-5V) using an ADC to convert it a digital represnted range (0-255).
 - The digital reprsented range (0-255) is then mapped to range of position in terms of steps (0-200) to determine the target position of the motor.
 
 <img src="Images&GIFs/Mode3.gif" align="right"  >
 
-
  
- ```
-;*************************************************Mode3****************************************
-
-
-
- ```
-;*************************************************Mode3****************************************
-
 
 ****************Mode3*************  
-
-
 
 mode3:							; Mode3: Control Position with a Potentiometer
 
 
 		rjmp  posAdjst			;Jump to posAdjst subroutine to calculate and move to target postion
-
-
-
-
-;**********************************************************************************************
-
-
 
 
 ## Team members
