@@ -49,11 +49,11 @@
 
 ## PCP Schematic
 <img src="Images&GIFs/Schematic.PNG" align="right"  width="300" 
-     height="300" > <br> <br>
-<img src="Images&GIFs/PCB 3D.PNG" align="left"  width="300" 
+     height="300" >
+<img src="Images&GIFs/PCB 3D.PNG" align="center"  width="300" 
      height="300" > <br> <br>
 <div style="display:inline-block; ">
-  <span style="width:24%;float:left; display:inline-block;">
+  <span style="width:74%;float:left; display:inline-block;">
 <p>
  
   <ul>
