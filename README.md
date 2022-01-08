@@ -119,6 +119,7 @@ as we did in the project. </li>
   
 </div>
 ### Potentiometer
+<img src="Images/Pot.jpg" align="right" >
 In this way we control the position of Motor (rotation angle) by changing the position of the potentiometer, a range between 0-5V (0-255) can be obtained through the potentiometer by using ADC converter to convert the analog value (0-5V) of the potentiometer to digital value (0-255) and the result is mapped to position (step 0-200), the target position will be subtracted from motor current position to determine the direction and number of stepps to move, and the reminder of target position divided by 4 will be used to determine the appropriate step sequence.
 
 </br>
@@ -149,7 +150,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
 ### 5V boost converter
-<img src="    " align="right" >
+<img src="Images/5V Boost.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -183,7 +184,7 @@ are pinned in opposition to simplify board layout.
   
   ### Li-ion battery
 
-<img src="    " align="right" >
+<img src="Images/Li-ion Battery.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -202,7 +203,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 2-pin DIP switch
-<img src="    " align="right" >
+<img src="Images/2-Pin DIP Switch.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -221,7 +222,7 @@ are pinned in opposition to simplify board layout.
   <hr>
   
   ### 8 MHz crystal oscillator
-<img src="    " align="right" >
+<img src="Images/Crystal.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
@@ -239,7 +240,7 @@ are pinned in opposition to simplify board layout.
 
   <hr>
   ### Miscellaneous connectors
-<img src="    " align="right" >
+<img src="Images/Connectors.jpg" align="right" >
 <div style="display:inline-block; ">
   <span style="width:74%;float:left; display:inline-block;">
 <p>
