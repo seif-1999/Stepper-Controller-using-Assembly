@@ -274,6 +274,7 @@ In this way we control the position of Motor (rotation angle) by changing the po
 - This section of code reads PINB register and determine which mode to select.
  
  
+ ```
   ; Check mode at the beining of each cycle
 
 
@@ -292,9 +293,11 @@ In this way we control the position of Motor (rotation angle) by changing the po
 		cpi Mode, 3
 		breq mode0				; if Sw == 11 jump to mode 0
  
+ ```
 ### Mode0
 - In this mode we basically do nothing, just turn off all motor coils to preserve power.
 
+ ```
 ;*************************************************Mode0****************************************
 mode0:
 								; Mode0: do nothing
@@ -304,11 +307,13 @@ mode0:
 ;**********************************************************************************************
 
  
+ ```
 ### Mode1
 - In this mode the motor moves one complete rotation forward at Full steps and one complete rotation reverse at Full step.
 
 <img src="Images&GIFs/Mode1.gif" align="right"   >
 
+ ```
 ;*************************************************Mode1****************************************
 
 mode1:							; Mode1: Full stepping
@@ -349,10 +354,12 @@ reverseStep:
 ;**********************************************************************************************
 
  
+ ```
 ### Mode2
 - This mode is very close to mode1 except that it uses Half step increments.
 <img src="Images&GIFs/Mode2.gif" align="right"  >
 
+ ```
 ;*************************************************Mode2****************************************
 
 mode2:							; Mode2: Half Stepping
@@ -389,7 +396,8 @@ reverseHalf:
 		
 ;**********************************************************************************************
 
- 
+
+ ``` 
 ### Mode3
 - This mode read the potentiometer value (0-5V) using an ADC to convert it a digital represnted range (0-255).
 - The digital reprsented range (0-255) is then mapped to range of position in terms of steps (0-200) to determine the target position of the motor.
@@ -398,6 +406,7 @@ reverseHalf:
 
  
 
+ ```
 ****************Mode3*************  
 
 mode3:							; Mode3: Control Position with a Potentiometer
@@ -406,6 +415,7 @@ mode3:							; Mode3: Control Position with a Potentiometer
 		rjmp  posAdjst			;Jump to posAdjst subroutine to calculate and move to target postion
 
 
+ ```
 ## Team members
 - [Seif El-Din Ehab](https://github.com/seif-1999)
 - [Amina Farouk](https://github.com/aminafarouk1)
